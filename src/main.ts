@@ -1,3 +1,20 @@
-import {svgMaker} from '#src/SvgMaker.ts'
+import SvgMaker, {svgMaker} from '#src/SvgMaker.ts'
 
-export default svgMaker.make.bind(svgMaker)
+export const shapeToSvg: SvgMaker['make'] = svgMaker.make.bind(svgMaker)
+
+export default shapeToSvg
+
+export {SvgMaker, svgMaker}
+export type {
+  ColorOptions,
+  ColorStaticOptions,
+  ColorThemedOptions,
+  ConstructorOptions,
+  InputOptions,
+  Options,
+  ThemedColor,
+  ViewboxFullOptions,
+  ViewboxOptions,
+  ViewboxRectOptions,
+  ViewboxSquareOptions,
+} from '#src/SvgMaker.ts'
